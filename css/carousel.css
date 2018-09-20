@@ -1,0 +1,136 @@
+.carousel {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.carousel:hover .carousel-control.left {
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -o-transform: translateX(100%);
+  transform: translateX(100%);
+}
+.carousel:hover .carousel-control.right {
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+.carousel-inner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  font-size: 0;
+}
+.carousel-inner > .item {
+  position: relative;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  width: 100%;
+  height: auto;
+}
+.carousel-indicators {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  z-index: 15;
+  list-style: none;
+  text-align: right;
+}
+.carousel-indicators li {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  margin: 0 5px;
+  font-size: 12px;
+  color: #fff;
+  background-color: #000 \9;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  text-align: center;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
+}
+.carousel-indicators li.active {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  width: 80px;
+  height: 160px;
+  line-height: 160px;
+  margin-top: -40px;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  text-align: center;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.carousel-control .iconfont {
+  font-size: 50px;
+}
+.carousel-control.left {
+  left: -80px;
+}
+.carousel-control.right {
+  right: -80px;
+}
+.carousel-control:hover,
+.carousel-control:focus {
+  outline: 0;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.6);
+}
+.carousel-animate-enter {
+  opacity: 0;
+  -webkit-transform: scale(0.8, 0.8);
+  -moz-transform: scale(0.8, 0.8);
+  -ms-transform: scale(0.8, 0.8);
+  -o-transform: scale(0.8, 0.8);
+  transform: scale(0.8, 0.8);
+}
+.carousel-animate-leave {
+  position: absolute!important;
+  top: 0;
+  width: 100%;
+}
+.carousel-animate-leave-to-left,
+.carousel-animate-leave-to-right {
+  position: absolute!important;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+.carousel-animate-leave-to-left {
+  -webkit-transform: translateX(-100%) scale(0.8, 0.8);
+  -moz-transform: translateX(-100%) scale(0.8, 0.8);
+  -ms-transform: translateX(-100%) scale(0.8, 0.8);
+  -o-transform: translateX(-100%) scale(0.8, 0.8);
+  transform: translateX(-100%) scale(0.8, 0.8);
+}
+.carousel-animate-leave-to-right {
+  -webkit-transform: translateX(100%) scale(0.8, 0.8);
+  -moz-transform: translateX(100%) scale(0.8, 0.8);
+  -ms-transform: translateX(100%) scale(0.8, 0.8);
+  -o-transform: translateX(100%) scale(0.8, 0.8);
+  transform: translateX(100%) scale(0.8, 0.8);
+}

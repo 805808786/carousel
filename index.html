@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+
+  <title>vue轮播demo</title>
+  <!--icon-->
+  <link rel="stylesheet" href="https://at.alicdn.com/t/font_529261_yyh9wnvuf9cz0k9.css">
+  <link rel="stylesheet" href="css/carousel.css">
+</head>
+<body>
+<!--[if lte IE 9]><p class="IE9">您的浏览器版本过低，请点击<a href="https://browsehappy.com/" target="_blank">升级您的浏览器</a>提示您的浏览体验！</p><![endif]-->
+
+<div id="carousel" class="carousel" @mouseover="isCarousel=true" @mouseout="isCarousel=false">
+  <div class="carousel-inner">
+    <transition name="carousel-animates"
+                enter-class="carousel-animate-enter"
+                leave-class="carousel-animate-leave"
+                :leave-active-class="leaveToClass">
+      <template>
+        <div class="item" :key="active" >
+          <a :href="carousel[active].url" :title="carousel[active].title">
+            <img :src="carousel[active].image" alt="">
+          </a>
+        </div>
+      </template>
+    </transition>
+  </div>
+  <ol class="carousel-indicators">
+    <li @click="move(active>index?-1:1,index)" v-for="(item,index) in carousel" :key="index" :class="index===active?'item active':'item'">{{index+1}}</li>
+  </ol>
+  <a @click="move(-1)" class="left carousel-control"><i class="iconfont icon-zuo"></i></a>
+  <a @click="move(1)" class="right carousel-control"><i class="iconfont icon-you"></i></a>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+<script src="js/carousel.js"></script>
+</body>
+</html>
