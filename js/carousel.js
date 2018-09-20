@@ -1,15 +1,11 @@
-
-// url：链接地址
-//image：图片地址
-//title：鼠标滑过显示的文本
-var carousels=[//轮播内容
+let carousels=[//轮播内容
   {"url":"#","image":"img/b1.png","title":"xxx"},
   {"url":"#","image":"img/b2.png","title":"xx"},
   {"url":"#","image":"img/b3.png","title":"x"},
   {"url":"#","image":"img/b1.png","title":"xxx"},
   {"url":"#","image":"img/b2.png","title":"xx"},
   {"url":"#","image":"img/b3.png","title":"x"}
-]
+];
 new Vue({
   el: '#carousel',
   data:{
